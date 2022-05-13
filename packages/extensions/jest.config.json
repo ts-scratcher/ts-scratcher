@@ -11,7 +11,7 @@
     "^(\\.{1,2}/.*)\\.js$": "$1"
   },
   "verbose": true,
-  "roots": ["./__tests__"],
+  "roots": ["./src/__tests__"],
   "collectCoverage": true,
   "collectCoverageFrom": ["**/*.ts", "!**/node_modules/**"],
   "testMatch": ["**/*.test.ts"],

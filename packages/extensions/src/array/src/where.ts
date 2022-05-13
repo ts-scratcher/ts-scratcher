@@ -15,15 +15,15 @@ Object.defineProperty(Array.prototype, "whereNot", {
   },
 });
 
-function predicateNullValue(v: any, selector: (value: any) => any) {
-  const p = Object.getValue(v, selector);
-  return Object.isNullOrUndefined(p);
-}
 Object.defineProperty(Array.prototype, "whereNull", {
   configurable: true,
   enumerable: false,
   writable: true,
   value: function (this: Array<any>, selector: (value: any) => any) {
+    function predicateNullValue(v: any, selector: (value: any) => any) {
+      const p = Object.getValue(v, selector);
+      return Object.isNullOrUndefined(p);
+    }
     return this.where((value) => predicateNullValue(value, selector));
   },
 });
@@ -32,7 +32,10 @@ Object.defineProperty(Array.prototype, "whereNotNull", {
   enumerable: false,
   writable: true,
   value: function (this: Array<any>, selector: (value: any) => any) {
+    function predicateNullValue(v: any, selector: (value: any) => any) {
+      const p = Object.getValue(v, selector);
+      return Object.isNullOrUndefined(p);
+    }
     return this.where((value) => !predicateNullValue(value, selector));
   },
 });
-

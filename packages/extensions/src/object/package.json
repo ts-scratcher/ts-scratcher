@@ -1,10 +1,10 @@
 {
   "name": "@ts-scratcher/object",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "object extension methods for TypeScript",
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/ts-scratcher/ts-scratcher-extensions/tree/main/packages/ts-scratcher-object#readme",
+  "homepage": "https://github.com/ts-scratcher/ts-scratcher/tree/main/packages/extensions/src/object#readme",
   "keywords": [
     "typescript",
     "extensions",
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ts-scratcher/ts-scratcher-extensions.git"
+    "url": "git+https://github.com/ts-scratcher/ts-scratcher.git"
   },
   "bugs": {
-    "url": "https://github.com/ts-scratcher/ts-scratcher-extensions/issues"
+    "url": "https://github.com/ts-scratcher/ts-scratcher/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",

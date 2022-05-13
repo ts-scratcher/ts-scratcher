@@ -16,6 +16,6 @@
     "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
     "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
   },
-  "include": ["index.ts", "src/**/*.ts"],
-  "exclude": ["__tests__", "__testscoverage__"]
+  "include": ["index.ts"],
+  "exclude": ["src/__tests__", "__testscoverage__"]
 }
