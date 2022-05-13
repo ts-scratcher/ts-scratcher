@@ -1,0 +1,12 @@
+import "@ts-scratcher/number";
+import "./src";
+import "./src/stringConstructor";
+import "./src/toChangeDateString";
+import "./src/isValid";
+import "./src/tryDecomposeYearAndDays";
+import "./src/toDefault";
+import "./src/toHiragana";
+import "./src/toNumberFormat";
+import "./src/toNumberFormatZeroEmpty";
+import "./src/toDate";
+import "./src/toDateWithJP";

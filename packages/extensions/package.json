@@ -1,0 +1,48 @@
+{
+  "name": "@ts-scratcher/extensions",
+  "version": "1.0.0",
+  "description": "Add extension methods to string, number, date, array, and object base classes",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/ts-scratcher/ts-scratcher-extensions/tree/main/packages/ts-scratcher-array#readme",
+  "keywords": [
+    "typescript",
+    "extensions"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "buildpackage": "cd dist && npm pack",
+    "test": "jest --config jest.config.json",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ts-scratcher/ts-scratcher-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ts-scratcher/ts-scratcher-extensions/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "@babel/preset-env": "^7.17.10",
+    "@types/jest": "^27.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "babel-jest": "^28.1.0",
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@ts-scratcher/array": "^1.0.0",
+    "@ts-scratcher/date": "^1.0.0",
+    "@ts-scratcher/number": "^1.0.1",
+    "@ts-scratcher/object": "^1.0.1",
+    "@ts-scratcher/string": "^1.0.1"
+  }
+}
