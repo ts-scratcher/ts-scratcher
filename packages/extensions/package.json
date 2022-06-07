@@ -1,6 +1,6 @@
 {
   "name": "@ts-scratcher/extensions",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "description": "Add extension methods to string, number, date, array, and object base classes",
   "author": "",
   "license": "MIT",
@@ -9,12 +9,17 @@
     "typescript",
     "extensions"
   ],
-  "main": "index.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.map",
+    "dist/*.ts"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "ncc:build": "npx ncc build index.ts -m -o dist",
+    "ncc:build2": "npx ncc build index.ts -o dist",
     "build": "tsc",
-    "build:watch": "tsc -w",
-    "prepublishOnly": "npm run build",
-    "buildpackage": "cd dist && npm pack",
     "test": "jest --config jest.config.json",
     "publish": "npm publish --access public"
   },
@@ -32,6 +37,7 @@
     "@types/jest": "^27.5.1",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
+    "@vercel/ncc": "^0.34.0",
     "babel-jest": "^28.1.0",
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
@@ -39,10 +45,10 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@ts-scratcher/array": "^1.0.2",
-    "@ts-scratcher/date": "^1.0.1",
-    "@ts-scratcher/number": "^1.0.2",
-    "@ts-scratcher/object": "^1.0.2",
-    "@ts-scratcher/string": "^1.0.2"
+    "@ts-scratcher/array": "^1.1.0",
+    "@ts-scratcher/date": "^1.1.0",
+    "@ts-scratcher/number": "^1.1.0",
+    "@ts-scratcher/object": "^1.1.0",
+    "@ts-scratcher/string": "^1.1.0"
   }
 }

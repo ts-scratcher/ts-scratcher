@@ -1,5 +1,3 @@
-import "@ts-scratcher/object";
-
 String.isNullOrEmpty = (str: string | undefined | null) => !str;
 String.isNullOrWhiteSpace = (s: string | undefined | null) =>
   !s || s.replace(/\s/g, "").length < 1;

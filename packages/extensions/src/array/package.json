@@ -1,6 +1,6 @@
 {
   "name": "@ts-scratcher/array",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "array extension methods for TypeScript",
   "author": "",
   "license": "MIT",
@@ -10,12 +10,15 @@
     "extensions",
     "array"
   ],
-  "main": "index.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.map",
+    "dist/*.ts"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc -w",
-    "prepublishOnly": "npm run build",
-    "buildpackage": "cd dist && npm pack",
+    "ncc:build": "npx ncc build index.ts -m -o dist",
     "test": "jest --config jest.config.json",
     "publish": "npm publish --access public"
   },
@@ -30,9 +33,12 @@
     "@babel/core": "^7.17.10",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-env": "^7.17.10",
+    "@parcel/packager-ts": "^2.6.0",
+    "@parcel/transformer-typescript-types": "^2.6.0",
     "@types/jest": "^27.5.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
+    "@vercel/ncc": "^0.34.0",
     "babel-jest": "^28.1.0",
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
@@ -40,6 +46,6 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@ts-scratcher/object": "^1.0.2"
+    "@ts-scratcher/object": "^1.1.0"
   }
 }

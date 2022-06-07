@@ -1,3 +1,4 @@
+import "@ts-scratcher/number";
 Object.defineProperty(String.prototype, "toNumberFormatZeroEmpty", {
   configurable: true,
   enumerable: false,

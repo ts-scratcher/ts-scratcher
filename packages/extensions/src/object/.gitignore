@@ -7,8 +7,9 @@
 /docs
 /.github
 /dist
+/lib
 /__testscoverage__
-
+.cache
 
 # testing
 /coverage
