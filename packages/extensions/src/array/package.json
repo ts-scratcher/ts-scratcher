@@ -1,6 +1,6 @@
 {
   "name": "@ts-scratcher/array",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "array extension methods for TypeScript",
   "author": "",
   "license": "MIT",
@@ -18,7 +18,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "ncc:build": "npx ncc build index.ts -m -o dist",
+    "build": "tsc && webpack --mode development",
     "test": "jest --config jest.config.json",
     "publish": "npm publish --access public"
   },
@@ -42,10 +42,14 @@
     "babel-jest": "^28.1.0",
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
+    "style-loader": "^3.3.1",
     "ts-jest": "^28.0.2",
-    "typescript": "^4.6.4"
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.6.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "@ts-scratcher/object": "^1.1.0"
+    "@ts-scratcher/object": "^1.2.0"
   }
 }

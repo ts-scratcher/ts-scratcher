@@ -1,3 +1,4 @@
+
 interface ObjectConstructor {
   isNullOrUndefined(obj: any): boolean;
   /**
